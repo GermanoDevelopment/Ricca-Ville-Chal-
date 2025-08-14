@@ -27,9 +27,25 @@ export function Footer() {
               Sua casa de temporada em Barra Grande - Piauí. Momentos inesquecíveis a apenas 800m do mar, com todo
               conforto e comodidade que você merece.
             </Text>
-            <div className="flex items-center text-sm text-muted-foreground">
-              <MapPin className="w-4 h-4 mr-2" />
-              Praia de Barra Grande, Piauí - Brasil
+            <div className="space-y-2 text-sm text-muted-foreground">
+              <div className="flex items-center">
+                <MapPin className="w-4 h-4 mr-2" />
+                Praia de Barra Grande, Piauí - Brasil
+              </div>
+              <div>
+                <Text variant="small" className="font-medium">
+                  Grupo RICCA CASUAL LTDA
+                </Text>
+              </div>
+              <div>
+                <Text variant="small">CNPJ: 25.463.257/0001-00</Text>
+              </div>
+              <div>
+                <Text variant="small">Rua Landri Sales, 10a - Centro</Text>
+              </div>
+              <div>
+                <Text variant="small">Esperantina - PI, 64.180-000</Text>
+              </div>
             </div>
           </div>
 
@@ -58,29 +74,29 @@ export function Footer() {
               <ContactInfo
                 icon={MessageCircle}
                 label="WhatsApp"
-                value="(86) 99999-9999"
-                href="https://wa.me/5586999999999"
+                value="(86) 99839-0312"
+                href="https://wa.me/5586998390312"
                 className="p-0 hover:bg-transparent"
               />
               <ContactInfo
                 icon={Phone}
                 label="Telefone"
-                value="(86) 99999-9999"
-                href="tel:+5586999999999"
+                value="(86) 99839-0312"
+                href="tel:+5586998390312"
                 className="p-0 hover:bg-transparent"
               />
               <ContactInfo
                 icon={Mail}
                 label="E-mail"
-                value="contato@riccaville.com"
-                href="mailto:contato@riccaville.com"
+                value="casualricca@gmail.com"
+                href="mailto:casualricca@gmail.com"
                 className="p-0 hover:bg-transparent"
               />
               <ContactInfo
                 icon={Instagram}
                 label="Instagram"
-                value="@riccavillechale"
-                href="https://instagram.com/riccavillechale"
+                value="@riccacasual"
+                href="https://instagram.com/riccacasual"
                 className="p-0 hover:bg-transparent"
               />
             </div>
@@ -91,7 +107,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
           <div className="flex items-center mb-4 md:mb-0">
-            <Text variant="small">© {currentYear} Ricca Ville Chalé. Todos os direitos reservados.</Text>
+            <Text variant="small">© {currentYear} Grupo RICCA CASUAL LTDA. Todos os direitos reservados.</Text>
           </div>
           <div className="flex items-center">
             <Text variant="small">Feito com</Text>

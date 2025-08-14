@@ -20,14 +20,14 @@ export function ContactSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <ContactButton
                 type="whatsapp"
-                value="86999999999"
+                value="8699839-0312"
                 className="text-lg px-8 py-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
                 Reservar pelo WhatsApp
               </ContactButton>
               <ContactButton
                 type="phone"
-                value="86999999999"
+                value="8699839-0312"
                 variant="outline"
                 className="text-lg px-8 py-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
@@ -43,21 +43,16 @@ export function ContactSection() {
             <ContactInfo
               icon={MessageCircle}
               label="WhatsApp"
-              value="(86) 99999-9999"
-              href="https://wa.me/5586999999999"
+              value="(86) 99839-0312"
+              href="https://wa.me/5586998390312"
             />
-            <ContactInfo icon={Phone} label="Telefone" value="(86) 99999-9999" href="tel:+5586999999999" />
-            <ContactInfo
-              icon={Mail}
-              label="E-mail"
-              value="contato@riccaville.com"
-              href="mailto:contato@riccaville.com"
-            />
+            <ContactInfo icon={Phone} label="Telefone" value="(86) 99839-0312" href="tel:+5586998390312" />
+            <ContactInfo icon={Mail} label="E-mail" value="casualricca@gmail.com" href="mailto:casualricca@gmail.com" />
             <ContactInfo
               icon={Instagram}
               label="Instagram"
-              value="@riccavillechale"
-              href="https://instagram.com/riccavillechale"
+              value="@riccacasual"
+              href="https://instagram.com/riccacasual"
             />
           </div>
 
@@ -71,7 +66,7 @@ export function ContactSection() {
             </Text>
             <ContactButton
               type="whatsapp"
-              value="86999999999"
+              value="8699839-0312"
               className="text-lg px-8 py-4 shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300"
             >
               Fazer Reserva Agora
