@@ -80,16 +80,16 @@ export function GallerySection() {
         />
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {images.map((image, index) => (
+            {images.map((image, index) => (
             <GalleryItem
               key={index}
               src={image.src}
               alt={image.alt}
               onClick={() => openLightbox(index)}
               className="animate-slide-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              // Removido o prop 'style' que não existe em GalleryItemProps
             />
-          ))}
+            ))}
         </div>
 
         <Lightbox
