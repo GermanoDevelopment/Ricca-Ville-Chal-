@@ -1,32 +1,27 @@
-import { cn } from "@/lib/utils"
-import type React from "react"
+import React from "react"
 
+// 1. Adicionamos a nova propriedade aqui
 interface SectionTitleProps {
+  level?: 1 | 2 | 3 | 4 | 5 | 6
   children: React.ReactNode
   className?: string
-  level?: 1 | 2 | 3
-  centered?: boolean
+  centered?: boolean // Propriedade para centralizar (opcional)
 }
 
-export function SectionTitle({ children, className, level = 2, centered = false }: SectionTitleProps) {
-  const Component = `h${level}` as keyof JSX.IntrinsicElements
+export function SectionTitle({ 
+  level = 2, 
+  children, 
+  className, 
+  centered = false // 2. Pegamos a propriedade (valor padrão: false)
+}: SectionTitleProps) {
+  const Tag: React.ElementType = `h${level}`
 
-  const levelClasses = {
-    1: "text-4xl md:text-5xl lg:text-6xl",
-    2: "text-3xl md:text-4xl lg:text-5xl",
-    3: "text-2xl md:text-3xl lg:text-4xl",
-  }
+  // 3. Juntamos as classes: a que veio de fora + 'text-center' (se 'centered' for true)
+  const finalClassName = `${className || ''} ${centered ? 'text-center' : ''}`.trim()
 
   return (
-    <Component
-      className={cn(
-        "font-serif font-bold text-foreground mb-4",
-        levelClasses[level],
-        centered && "text-center",
-        className,
-      )}
-    >
+    <Tag className={finalClassName}>
       {children}
-    </Component>
+    </Tag>
   )
 }

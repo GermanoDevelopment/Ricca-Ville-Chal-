@@ -67,15 +67,18 @@ export function ImportantInfoSection() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {infoItems.map((item, index) => (
-              <RuleItem
+              <div
                 key={index}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-                type={item.type}
                 className="animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
-              />
+              >
+                <RuleItem
+                  icon={item.icon}
+                  title={item.title}
+                  description={item.description}
+                  type={item.type}
+                />
+              </div>
             ))}
           </div>
         </div>

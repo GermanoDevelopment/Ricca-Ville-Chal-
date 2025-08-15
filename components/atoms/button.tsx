@@ -3,30 +3,32 @@ import { Button as ShadcnButton } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { forwardRef } from "react"
 
-type ButtonProps = React.ComponentProps<typeof ShadcnButton> & {
-  variant?: "default" | "secondary" | "outline" | "ghost" | "link" | "coastal"
+type ShadcnVariants = "default" | "secondary" | "outline" | "ghost" | "link"
+type ButtonProps = Omit<React.ComponentProps<typeof ShadcnButton>, "variant"> & {
+  variant?: ShadcnVariants | "coastal"
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = "default", ...props }, ref) => {
+  ({ className, variant = "default", ...rest }, ref) => {
+    const mappedVariant: ShadcnVariants = variant === "coastal" ? "default" : variant as ShadcnVariants
+
     return (
       <ShadcnButton
         ref={ref}
-        variant={variant === "coastal" ? "default" : variant}
+        variant={mappedVariant}
         className={cn(
           variant === "coastal" && [
             "bg-primary hover:bg-primary/90 text-primary-foreground",
             "shadow-lg hover:shadow-xl transition-all duration-300",
             "border-2 border-primary/20 hover:border-primary/30",
           ],
-          className,
+          className
         )}
-        {...props}
+        {...rest}
       />
     )
   }
 )
 
 Button.displayName = "Button"
-
 export { Button }

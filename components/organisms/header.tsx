@@ -7,7 +7,7 @@ type ContactType = "whatsapp" | "phone" | "email"
 type ButtonBaseProps = React.ComponentProps<typeof Button>
 
 export interface ContactButtonProps
-  extends Omit<ButtonBaseProps, "children" | "href"> {
+  extends Omit<ButtonBaseProps, "children" | "href" | "type"> {
   type: ContactType
   value: string
   message?: string
@@ -37,12 +37,24 @@ function buildHref({
 }
 
 export const ContactButton = React.forwardRef<HTMLButtonElement, ContactButtonProps>(
-  ({ type, value, message, children, className, variant = "coastal", onClick, ...rest }, ref) => {
-    const href = buildHref({ type, value, message })
+  (
+    {
+      type,
+      value,
+      message,
+      children,
+      className,
+      variant = "default",
+      onClick,
+      ...rest
+    }: ContactButtonProps,
+    ref: React.Ref<HTMLButtonElement>
+  ) => {
+    const href: string | undefined = buildHref({ type, value, message })
 
     return (
-      <Button ref={ref} asChild variant={variant} className={className} {...rest}>
-        <a href={href} target="_blank" rel="noopener noreferrer" onClick={onClick}>
+      <Button ref={ref} asChild variant={variant} className={className} onClick={onClick} {...rest}>
+        <a href={href} target="_blank" rel="noopener noreferrer">
           {children ??
             (type === "whatsapp" ? "Falar no WhatsApp" : type === "phone" ? "Ligar" : "Enviar e-mail")}
         </a>

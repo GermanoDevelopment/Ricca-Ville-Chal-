@@ -52,7 +52,6 @@ export function AccommodationsSection() {
               features={accommodation.features}
               description={accommodation.description}
               className="animate-slide-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
             />
           ))}
         </div>
