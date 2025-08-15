@@ -5,6 +5,7 @@ import { AccommodationsSection } from "@/components/organisms/accommodations-sec
 import { LeisureAreaSection } from "@/components/organisms/leisure-area-section"
 import { CapacityRulesSection } from "@/components/organisms/capacity-rules-section"
 import { ImportantInfoSection } from "@/components/organisms/important-info-section"
+import { TestimonialsSection } from "@/components/organisms/testimonials-section"
 import { GallerySection } from "@/components/organisms/gallery-section"
 import { LocationSection } from "@/components/organisms/location-section"
 import { ContactSection } from "@/components/organisms/contact-section"
@@ -23,6 +24,7 @@ export function HomePage() {
         <LeisureAreaSection />
         <CapacityRulesSection />
         <ImportantInfoSection />
+        <TestimonialsSection />
         <GallerySection />
         <LocationSection />
         <ContactSection />
