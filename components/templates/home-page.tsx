@@ -7,6 +7,7 @@ import { CapacityRulesSection } from "@/components/organisms/capacity-rules-sect
 import { ImportantInfoSection } from "@/components/organisms/important-info-section"
 import { GallerySection } from "@/components/organisms/gallery-section"
 import { LocationSection } from "@/components/organisms/location-section"
+import { SocialProofSection } from "@/components/organisms/social-proof-section"
 import { ContactSection } from "@/components/organisms/contact-section"
 import { Footer } from "@/components/organisms/footer"
 import { FloatingContact } from "@/components/molecules/floating-contact"
@@ -25,6 +26,7 @@ export function HomePage() {
         <ImportantInfoSection />
         <GallerySection />
         <LocationSection />
+        <SocialProofSection />
         <ContactSection />
       </main>
       <Footer />
