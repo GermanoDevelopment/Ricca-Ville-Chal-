@@ -1,66 +1,30 @@
 "use client"
+import { Logo } from "@/components/atoms/logo"
+import { NavLink } from "@/components/molecules/nav-link"
+import { ContactButton } from "@/components/molecules/contact-button"
 
-import * as React from "react"
-import { Button } from "@/components/atoms/button"
+export const Header = () => {
+  const navLinks = [
+    { href: "#sobre", label: "Sobre" },
+    { href: "#acomodacoes", label: "Acomodações" },
+    { href: "#galeria", label: "Galeria" },
+  ]
 
-type ContactType = "whatsapp" | "phone" | "email"
-type ButtonBaseProps = React.ComponentProps<typeof Button>
-
-export interface ContactButtonProps
-  extends Omit<ButtonBaseProps, "children" | "href" | "type"> {
-  type: ContactType
-  value: string
-  message?: string
-  children?: React.ReactNode
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+        <Logo />
+        <nav className="hidden md:flex gap-6">
+          {navLinks.map(link => (
+            <NavLink key={link.href} href={link.href}>{link.label}</NavLink>
+          ))}
+        </nav>
+        <div className="hidden md:block">
+          <ContactButton type="whatsapp" value="86998390312">
+            Fale Conosco
+          </ContactButton>
+        </div>
+      </div>
+    </header>
+  )
 }
-
-function buildHref({
-  type,
-  value,
-  message,
-}: {
-  type: ContactType
-  value: string
-  message?: string
-}) {
-  switch (type) {
-    case "whatsapp": {
-      const phone = value.replace(/\D/g, "")
-      const text = message ? encodeURIComponent(message) : ""
-      return `https://wa.me/${phone}${text ? `?text=${text}` : ""}`
-    }
-    case "phone":
-      return `tel:${value.replace(/\D/g, "")}`
-    case "email":
-      return `mailto:${value}`
-  }
-}
-
-export const ContactButton = React.forwardRef<HTMLButtonElement, ContactButtonProps>(
-  (
-    {
-      type,
-      value,
-      message,
-      children,
-      className,
-      variant = "default",
-      onClick,
-      ...rest
-    }: ContactButtonProps,
-    ref: React.Ref<HTMLButtonElement>
-  ) => {
-    const href: string | undefined = buildHref({ type, value, message })
-
-    return (
-      <Button ref={ref} asChild variant={variant} className={className} onClick={onClick} {...rest}>
-        <a href={href} target="_blank" rel="noopener noreferrer">
-          {children ??
-            (type === "whatsapp" ? "Falar no WhatsApp" : type === "phone" ? "Ligar" : "Enviar e-mail")}
-        </a>
-      </Button>
-    )
-  }
-)
-
-ContactButton.displayName = "ContactButton"
