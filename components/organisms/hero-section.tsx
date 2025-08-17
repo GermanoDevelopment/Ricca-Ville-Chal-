@@ -96,19 +96,19 @@ export function HeroSection() {
         <div className="max-w-5xl mx-auto">
           {/* Location Badge */}
           <div className="mb-6 animate-fade-in">
-            <Badge variant="coastal" className="text-sm px-4 py-2 bg-accent/90 text-accent-foreground border-accent">
+            <Badge variant="coastal" className="text-sm px-4 py-2 bg-foreground text-background border-popover-foreground">
               <Icon icon={MapPin} size="sm" className="mr-2" />
               Barra Grande - Piauí
             </Badge>
           </div>
 
-          <SectionTitle level={1} centered className="mb-6 animate-slide-up text-background drop-shadow-lg">
+          <SectionTitle level={1} centered className="mb-6 animate-slide-up text-foregroud drop-shadow-lg">
             Viva dias inesquecíveis em Barra Grande – Piauí
           </SectionTitle>
 
           <Text
             variant="lead"
-            className="mb-8 max-w-3xl mx-auto text-center animate-slide-up text-background/90 drop-shadow-md"
+            className="mb-8 max-w-3xl mx-auto text-center animate-slide-up text-foregroud drop-shadow-md"
           >
             Desfrute de momentos únicos em nossa casa de temporada com piscina, área gourmet e toda comodidade que você
             merece, a apenas 800m do mar cristalino.
@@ -132,13 +132,13 @@ export function HeroSection() {
           <div className="animate-slide-up space-y-4">
             <ContactButton
               type="whatsapp"
-              value="86999999999"
+              value="86998390312"
               className="text-lg px-8 py-4 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 bg-primary hover:bg-primary/90"
             >
               Reservar Agora
             </ContactButton>
             <div>
-              <Text variant="small" className="text-background/80 drop-shadow-sm">
+              <Text variant="small" className="text-foregroud drop-shadow-sm">
                 Resposta rápida via WhatsApp • Disponível 24h
               </Text>
             </div>
