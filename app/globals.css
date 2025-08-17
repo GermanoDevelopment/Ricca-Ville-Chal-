@@ -4,42 +4,35 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Nova paleta baseada nas imagens reais do chalé */
-  --background: oklch(0.98 0.01 45); /* Creme suave */
-  --foreground: oklch(0.25 0.02 30); /* Marrom escuro */
-  --card: oklch(1 0 0); /* Branco puro */
-  --card-foreground: oklch(0.25 0.02 30);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.02 30);
-  --primary: oklch(0.55 0.12 25); /* Laranja terroso das telhas */
-  --primary-foreground: oklch(0.98 0.01 45);
-  --secondary: oklch(0.45 0.08 35); /* Tom madeira natural */
-  --secondary-foreground: oklch(0.98 0.01 45);
-  --muted: oklch(0.94 0.02 45);
-  --muted-foreground: oklch(0.45 0.02 30);
-  --accent: oklch(0.75 0.15 85); /* Amarelo vibrante das flores */
-  --accent-foreground: oklch(0.25 0.02 30);
-  --blue-tile: oklch(0.6 0.18 240); /* Azul dos azulejos decorativos */
-  --blue-tile-foreground: oklch(0.98 0.01 45);
+  --background: #F8F4E8; /* Creme */
+  --foreground: #225A6A; /* Azul Petróleo */
+  
+  --card: #FFFFFF;
+  --card-foreground: #225A6A;
+  
+  --popover: #FFFFFF;
+  --popover-foreground: #225A6A;
+  
+  --primary: #225A6A; /* Azul Petróleo */
+  --primary-foreground: #F8F4E8; /* Creme */
+  
+  --secondary: #E2B676; /* Bege Dourado */
+  --secondary-foreground: #225A6A; /* Azul Petróleo */
+  
+  --muted: #F0EADF; /* Variação mais escura do Creme */
+  --muted-foreground: #5a7d87; /* Variação mais clara do Azul Petróleo */
+  
+  --accent: #70CDE4; /* Azul Ciano */
+  --accent-foreground: #225A6A;
+  
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.88 0.02 45);
-  --input: oklch(0.94 0.02 45);
-  --ring: oklch(0.55 0.12 25);
-  --chart-1: oklch(0.55 0.12 25);
-  --chart-2: oklch(0.6 0.18 240);
-  --chart-3: oklch(0.75 0.15 85);
-  --chart-4: oklch(0.45 0.08 35);
-  --chart-5: oklch(0.7 0.1 60);
+  
+  --border: #E2B676; /* Bege Dourado */
+  --input: #FFFFFF;
+  --ring: #70CDE4; /* Azul Ciano */
+  
   --radius: 0.75rem;
-  --sidebar: oklch(0.96 0.01 45);
-  --sidebar-foreground: oklch(0.25 0.02 30);
-  --sidebar-primary: oklch(0.55 0.12 25);
-  --sidebar-primary-foreground: oklch(0.98 0.01 45);
-  --sidebar-accent: oklch(0.94 0.02 45);
-  --sidebar-accent-foreground: oklch(0.25 0.02 30);
-  --sidebar-border: oklch(0.88 0.02 45);
-  --sidebar-ring: oklch(0.55 0.12 25);
 }
 
 .dark {
@@ -132,7 +125,7 @@
     @apply bg-background text-foreground font-sans;
   }
 
-  /* Estilos base para tipografia elegante */
+  /* ESTILOS BASE PARA TIPOGRAFIA ELEGANTE */
   h1,
   h2,
   h3,
@@ -142,40 +135,20 @@
     @apply font-serif;
   }
 
-  /* Classes utilitárias para as cores do chalé */
-  .bg-tile-blue {
-    background-color: var(--blue-tile);
-    color: var(--blue-tile-foreground);
+  /* ADICIONE ESTE BLOCO ABAIXO */
+  h1 {
+    @apply text-4xl font-bold md:text-5xl;
   }
-
-  .text-tile-blue {
-    color: var(--blue-tile);
+  h2 {
+    @apply text-3xl font-bold md:text-4xl;
   }
-
-  .border-tile-blue {
-    border-color: var(--blue-tile);
+  h3 {
+    @apply text-2xl font-bold md:text-3xl;
   }
-
-  /* Animações aprimoradas e mais suaves */
-  .animate-fade-in {
-    animation: fadeIn 0.8s ease-out;
+  h4 {
+    @apply text-xl font-semibold md:text-2xl;
   }
-
-  .animate-slide-up {
-    animation: slideUp 1s ease-out;
-  }
-
-  .animate-slide-in-left {
-    animation: slideInLeft 0.8s ease-out;
-  }
-
-  .animate-slide-in-right {
-    animation: slideInRight 0.8s ease-out;
-  }
-
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
+}
 
   @keyframes fadeIn {
     from {
@@ -254,7 +227,7 @@
   a:focus-visible {
     @apply outline-2 outline-offset-2 outline-primary rounded-sm;
   }
-}
+
 
 /* Media queries para responsividade aprimorada */
 @media (max-width: 640px) {
