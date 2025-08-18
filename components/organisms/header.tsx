@@ -10,6 +10,8 @@ export const Header = () => {
     { href: "#sobre", label: "Sobre" },
     { href: "#acomodacoes", label: "Acomodações" },
     { href: "#galeria", label: "Galeria" },
+    { href: "#regras", label: "regras" },
+    { href: "#localizacao", label: "localização"}
   ]
 
   return (
@@ -25,7 +27,7 @@ export const Header = () => {
           ))}
         </nav>
         <div className="hidden md:block">
-          <ContactButton type="whatsapp" value="86998390312">
+          <ContactButton type="whatsapp" value="8699505437">
             Fale Conosco
           </ContactButton>
         </div>
