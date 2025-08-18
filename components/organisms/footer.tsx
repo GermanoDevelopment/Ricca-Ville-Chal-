@@ -74,15 +74,15 @@ export function Footer() {
               <ContactInfo
                 icon={MessageCircle}
                 label="WhatsApp"
-                value="(86) 99839-0312"
-                href="https://wa.me/5586998390312"
+                value="86 9950-5437"
+                href="https://wa.me/558699505437"
                 className="p-0 hover:bg-transparent"
               />
               <ContactInfo
                 icon={Phone}
                 label="Telefone"
-                value="(86) 99839-0312"
-                href="tel:+5586998390312"
+                value="86 9950-5437"
+                href="tel:+558699505437"
                 className="p-0 hover:bg-transparent"
               />
               <ContactInfo
