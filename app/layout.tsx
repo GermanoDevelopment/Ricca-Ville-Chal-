@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "Ricca Ville Chalé",
     images: [
       {
-        url: "/placeholder.svg?height=630&width=1200",
+        url: "/icone-site.svg",
         width: 1200,
         height: 630,
         alt: "Ricca Ville Chalé - Casa de Temporada em Barra Grande",
@@ -60,8 +60,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${playfair.variable} antialiased`}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/icone.svg" />
+        <link rel="apple-touch-icon" href="/icone.svg" />
         <meta name="theme-color" content="#4A90E2" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </head>
