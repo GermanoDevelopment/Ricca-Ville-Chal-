@@ -132,7 +132,7 @@ export function HeroSection() {
           <div className="animate-slide-up space-y-4">
             <ContactButton
               type="whatsapp"
-              value="86998390312"
+              value="8699505437"
               className="text-lg px-8 py-4 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 bg-primary hover:bg-primary/90"
             >
               Reservar Agora
