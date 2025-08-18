@@ -46,7 +46,7 @@ export function ContactSection() {
               value="86 9950-5437"
               href="https://wa.me/558699505437"
             />
-            <ContactInfo icon={Phone} label="Telefone" value="(86) 99839-0312" href="tel:+5586998390312" />
+            <ContactInfo icon={Phone} label="Telefone" value="86 9950-5437" href="tel:+5586998390312" />
             <ContactInfo icon={Mail} label="E-mail" value="casualricca@gmail.com" href="mailto:casualricca@gmail.com" />
             <ContactInfo
               icon={Instagram}
